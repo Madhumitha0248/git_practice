@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans">
+
+	<bean name="customer" class="com.madhu.Ex.map.Customer" p:id="20">
+
+
+		<property name="products">
+			<map>
+				<entry key="100" value="HP" />
+				<entry key="200">
+					<value>MacBook Pro</value>
+				</entry>
+				<entry value="MacBook Air">
+					<key>
+						<value>300</value>
+					</key>
+				</entry>
+				<entry>
+					<key>
+						<value>400</value>
+					</key>
+					<value>ThinkPad</value>
+				</entry>
+
+
+
+			</map>
+		</property>
+	</bean>
+</beans>

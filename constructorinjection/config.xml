@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans">
+
+	<bean name="address" class="com.madhu.Ex.constructorinjection.Address" 
+	p:hno="123" p:street="HBC Colony" p:city="HYD" />
+	<bean name="employee" class="com.madhu.Ex.constructorinjection.Employee">
+	<constructor-arg>
+	<value>20</value>
+	</constructor-arg>
+	<constructor-arg>
+	<ref bean="address" />
+	</constructor-arg>
+	<!-- can also use as attributes or c schema xmlns:c="http://www.springframework.org/schema/c -->
+	</bean>
+</beans>
